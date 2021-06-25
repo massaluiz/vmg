@@ -8,8 +8,10 @@ app.use(
   })
 );
 
-const homeRouter = require("./router/home");
+const homeRouter = require("./routers/home");
+const usersRouter = require('./routers/users');
 
 app.use("/", homeRouter);
+app.use("/users", usersRouter);
 
 module.exports = app;
